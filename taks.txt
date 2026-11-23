@@ -1,0 +1,25 @@
+une table tasks:
+
+task: exemple
+
+    {"state":"not checked",
+    "title":"exemple",
+    "id":1}
+
+get task/{id}
+
+post task/
+{"state":"checked",
+"title":"exemple2",
+"id":2}
+
+delete task/{id}
+
+put task/{1}
+
+{"state":"checked",
+"title":"exemple",
+"id":1}
+
+patch task/{1}
+{"title":"new title"}
