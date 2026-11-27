@@ -43,7 +43,7 @@ def delete_todo_endpoint(todo_id: UUID):
     deleted = delete_todo(todo_id)
     if not deleted:
         raise HTTPException(status_code=404, detail='Todo non trouvé')
-    return Response(status_code=status.HTTP_204_NO_CONTENT)  # un 204 n'a pas de corps
+    return Response(status_code=status.HTTP_204_NO_CONTENT)  
 
 @app.patch("/todos/{todo_id}")
 def patch_todo_endpoint(todo_id: UUID, todo_data: TodoUpdate):
