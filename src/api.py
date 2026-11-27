@@ -17,10 +17,10 @@ class TodoCreate(BaseModel):
     tags: list[str] = Field(default_factory=list)
 
 class TodoUpdate(BaseModel):
-    title: Optional[str] = Field(default=None, max_length=100)
+    title: str = Field(default=None, max_length=100)
     description: Optional[str] = None
-    state: Optional[State] = None
-    tags: Optional[list[str]] = None
+    state: State = None
+    tags: list[str] = None
 
 class Todo(BaseModel):
     id : UUID
